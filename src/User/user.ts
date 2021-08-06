@@ -1,12 +1,18 @@
-export class User {
+import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import "reflect-metadata";
 
-    private name !: string;
 
-    private password !: string;
+export class User implements BaseEntity {
 
-    private email !: string;
+    public login !: string;
 
-    private birthdate !: Date;
+    public name !: string;
+
+    public password !: string;
+
+    public email !: string;
+
+    public birthdate !: Date;
 
 
     constructor() {
